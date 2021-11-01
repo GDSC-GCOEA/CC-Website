@@ -352,7 +352,14 @@ form .fas {
   transform: translateY(5px);
 }
 
-
+@media (max-width: 890px){
+  .hero-text h1{
+    font-size: 3.8rem;
+  }
+  .hero-text p{
+    font-size: 1.7rem;
+  }
+}
 
 @media screen and (max-width: 720px) {
   /*changes reflects on screen with a width of 720px and below*/
@@ -380,6 +387,13 @@ form .fas {
   
     nav ul.show {
       transform: translateX(0);
+    }
+	
+    .hero-text h1{
+      font-size: 3.3rem;
+    }
+    .hero-text p{
+      font-size: 1.5rem;
     }
     
 
