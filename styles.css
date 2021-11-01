@@ -74,6 +74,14 @@ nav ul {
 nav ul li {
   font-weight: var(--bold-font);
 }
+.burger-menu {
+  color: var(--primary-color);
+  font-size: 2rem;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+  display: none;
+}
 
 /* The hero image */
 .hero-image {
@@ -278,4 +286,137 @@ form .fas {
   .underline {
     width: 25%;
   }
+}
+
+/* About us */
+.section{
+	width: 100%;
+	min-height: 100vh;
+	background-color: rgb(0, 0, 0);
+
+}
+.container{
+	width: 80%;
+	display: block;
+	margin:auto;
+	padding-top: 100px;
+  color: #fff;
+}
+.content-section{
+	float: left;
+	width: 55%;
+}
+.image-section{
+	float: right;
+	width: 40%;
+}
+.image-section img{
+	width: 100%;
+	height: auto;
+  border-radius: 50px;
+  transition: all .3s;
+}
+.image-section img:hover{
+  transform:scale(1.1) translateY(8px);
+}
+.content-section .title{
+	text-transform: uppercase;
+	font-size: 28px;
+}
+.content-section .content h3{
+	margin-top: 20px;
+	font-size: 21px;
+}
+.content-section .content p{
+	margin-top: 10px;
+	font-family: sans-serif;
+	font-size: 18px;
+	line-height: 1.5;
+}
+
+.content-section .social{
+	margin: 10px 0px;
+  padding: 10px 10px;
+}
+.content-section .social i{
+	color:var(--primary-color);
+	font-size: 30px;
+	padding:10px 10px;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  transition: all .3s;
+}
+.content-section .social i:hover{
+  background: #4475e2;
+  color: #fff;
+  transform: translateY(5px);
+}
+
+
+
+@media screen and (max-width: 720px) {
+  /*changes reflects on screen with a width of 720px and below*/
+  nav {
+      padding: 1.5rem 1rem;
+    }
+    nav ul {
+      position: fixed;
+      background-color: var(--bg-color);
+      flex-direction: column;
+      top: 86px;
+      left: 10%;
+      width: 80%;
+      text-align: center;
+      transform: translateX(120%);
+      transition: transform 0.5s ease-in;
+    }
+  
+     nav ul li {
+      margin: 8px;
+    }
+    .burger-menu {
+      display: block;
+    }
+  
+    nav ul.show {
+      transform: translateX(0);
+    }
+    
+
+    .container{
+      width: 80%;
+      display: block;
+      margin:auto;
+      padding-top:50px;
+    }
+    .content-section{
+      float:none;
+      width:100%;
+      display: block;
+      margin:auto;
+    }
+    .image-section{
+      float:none;
+      width:100%;
+      
+    }
+    .image-section img{
+      width: 100%;
+      height: auto;
+      display: block;
+      margin:auto;
+    }
+    .content-section .title{
+      text-align: center;
+      font-size: 19px;
+    }
+    .content-section .content .button{
+      text-align: center;
+    }
+    .content-section .content .button a{
+      padding:9px 30px;
+    }
+    .content-section .social{
+      text-align: center;
+    }
 }

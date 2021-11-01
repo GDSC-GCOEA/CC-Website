@@ -12,6 +12,19 @@
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
   <script src="https://kit.fontawesome.com/337c394ef7.js" crossorigin="anonymous"></script>
   <title>Coding Club GCOEA</title>
+  <link rel="icon" type="image/png" href="./assets/GCOE.png" />
+  <link rel="stylesheet" href="./styles.css" />
+  <title>Coding Club GCOEA</title>
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32x32.png" />
+
+  <!-- Animate CSS CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+  <!-- Font awesome -->
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
 </head>
 
 <body>
@@ -23,6 +36,9 @@
       <li><a href="#projects" class="nav-link">Projects</a></li>
       <li><a href="#contact" class="nav-link">Contact</a></li>
     </ul>
+    <button class="burger-menu" id="burger-menu">
+      <ion-icon class="bars" name="menu-outline"></ion-icon>
+    </button>
   </nav>
   <!--HeroImage-->
   <div class="hero-image">
@@ -32,6 +48,7 @@
       <a href="https://github.com/GCOEA-Coding-Club"><button>Github</button></a>
     </div>
   </div>
+
   <!-- Footer -->
   <footer class="footer">
     <div class="container">
@@ -77,5 +94,61 @@
 
 </body>
 <script src="script.js"></script>
+
+  <!-- About Us  -->
+  <div class="section">
+    <div class="container">
+      <div class="content-section">
+        <div class="title">
+          <h1>About Us</h1>
+        </div>
+        <div class="content">
+          <h3>Convert your ideas into code!</h3>
+          <p>Coding Club GCOEA is a coding community of Government College of Engineering for students who are interested in coding, development and computer engineering.</p>
+        </div>
+        <div class="social">
+          <a href=""><i class="fab fa-facebook-f"></i></a>
+          <a href=""><i class="fab fa-twitter"></i></a>
+          <a href=""><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+      <div class="image-section">
+        <img src="assets/about.jpg">
+      </div>
+    </div>
+  </div>
+
+
+
+
+</body>
+<script src="script.js"></script>
+<!-- Ion icons scripts -->
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<script>
+  const fileInput = document.getElementById('file-input');
+
+  fileInput.addEventListener('change', (e) => doSomethingWithFiles(e.target.files));
+  // Nav hamburgerburger selections
+
+  const burger = document.querySelector("#burger-menu");
+  const ul = document.querySelector("nav ul");
+  const nav = document.querySelector("nav");
+  burger.addEventListener("click", () => {
+    ul.classList.toggle("show");
+  });
+
+
+
+  // Select nav links
+  const navLink = document.querySelectorAll(".nav-link");
+
+  navLink.forEach((link) =>
+    link.addEventListener("click", () => {
+      ul.classList.remove("show");
+    })
+  );
+</script>
 
 </html>
