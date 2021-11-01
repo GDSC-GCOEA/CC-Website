@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,900;1,700&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 /* Variables */
 :root {
   --font-family: "Roboto", sans-serf;
@@ -103,13 +103,13 @@ nav ul li {
   transform: translate(-50%, -50%);
   color: white;
 }
-.hero-text h1{
+.hero-text h1 {
   font-size: 5rem;
 }
-.hero-text p{
+.hero-text p {
   font-size: 2rem;
   margin-top: 20px;
-  color: var(--primary-color)
+  color: var(--primary-color);
 }
 
 .hero-text button {
@@ -131,35 +131,159 @@ nav ul li {
   background-color: var(--primary-color);
   color: black;
 }
+.container {
+  max-width: 1170px;
+  /* background-color: red; */
+  margin: auto;
+}
 
+ul {
+  list-style: none;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
 
+/*********** FOOTER **********/
 
-@media screen and (max-width: 720px) {
-  /*changes reflects on screen with a width of 720px and below*/
-  nav {
-      padding: 1.5rem 1rem;
-    }
-    nav ul {
-      position: fixed;
-      background-color: var(--bg-color);
-      flex-direction: column;
-      top: 86px;
-      left: 10%;
-      width: 80%;
-      text-align: center;
-      transform: translateX(120%);
-      transition: transform 0.5s ease-in;
-    }
-  
-     nav ul li {
-      margin: 8px;
-    }
-    .burger-menu {
-      display: block;
-    }
-  
-    nav ul.show {
-      transform: translateX(0);
-    }
-    
+.footer {
+  box-sizing: border-box;
+  padding: 50px 0;
+  background: linear-gradient(to right, #aab2dd, #2d0b00);
+  color: #fff;
+  width: 100%;
+  line-height: 1.5;
+  font-family: "Poppins", sans-serif;
+}
+
+.footer-col {
+  width: 25%;
+  padding: 0 15px;
+}
+
+.footer-col h4 {
+  font-size: 18px;
+  color: #fff;
+  text-transform: capitalize;
+  margin-bottom: 35px;
+  font-weight: 500;
+  position: relative;
+}
+form {
+  padding-bottom: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 50px;
+}
+form .far {
+  font-size: 18px;
+  margin-right: 10px;
+}
+
+form input {
+  width: 80%;
+  background: transparent;
+  color: #ccc;
+  border: 0;
+  outline: none;
+  border-radius: 5px;
+}
+form button {
+  background: transparent;
+  padding-right: 10px;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+}
+form .fas {
+  font-size: 16px;
+  color: #ccc;
+}
+
+.underline {
+  content: "";
+  box-sizing: border-box;
+  width: 50%;
+  height: 6px;
+  bottom: -20px;
+  position: absolute;
+  background: #767676;
+  border-radius: 3px;
+  top: 25px;
+  left: 0;
+  overflow: hidden;
+}
+.underline span {
+  width: 15px;
+  height: 100%;
+  bottom: -10px;
+  background-color: #fff;
+  border-radius: 3px;
+  position: absolute;
+  top: 0%;
+  left: 10px;
+  animation: moving 2s linear infinite;
+}
+@keyframes moving {
+  0% {
+    left: -20px;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+.footer-col ul li:not(:last-child) {
+  margin-bottom: 10px;
+}
+.footer-col ul li a {
+  font-size: 16px;
+  text-transform: capitalize;
+  text-decoration: none;
+  font-weight: 400;
+  display: block;
+  transition: all 0.4s ease;
+}
+.footer-col ul li a:hover {
+  color: #bbb;
+  padding-left: 8px;
+}
+.footer-col .social-links a {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin: 0 10px 10px 0;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  transition: all 0.5s ease;
+}
+.footer-col .social-links a:hover {
+  color: #24262b;
+  background-color: whitesmoke;
+  padding-bottom: 10px;
+  transform: scale(1.2) translateY(-15px);
+}
+
+@media (max-width: 767px) {
+  .footer-col {
+    width: 50%;
+    padding: 0 15 px;
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 574px) {
+  .footer-col {
+    width: 50%;
+  }
+}
+
+@media (max-width: 249px) {
+  .underline {
+    width: 25%;
+  }
 }
