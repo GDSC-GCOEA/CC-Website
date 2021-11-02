@@ -458,6 +458,7 @@ form .fas {
 
 .projcards {
   padding: 2rem;
+  margin-bottom: 50px;
 }
 
 .projcards > ul {
@@ -493,24 +494,37 @@ form .fas {
 /* how to join */
 .section2{
 	width: 100%;
-	min-height: 100vh;
+	min-height: 60vh;
 	background-color: rgb(0, 0, 0);
   color: #fff;
   width: 80%;
 	display: block;
 	margin:auto;
-	padding-top: 0px;
+	padding-top: 50px;
   padding-bottom: 0px;
   text-align: center;
 }
 
 .title2{
-	text-transform: uppercase;
-	font-size: 50px;
+	font-size: 30px;
+  color: var(--primary-color);
 }
 .content2 h3{
 	margin-top: 20px;
 	font-size: 30px;
+}
+
+@media (max-width: 767px) {
+  .title2{
+    font-size: 20px;
+  }
+  .content2 h3{
+    font-size: 18px;
+  }
+  .section2{
+    min-height: 50vh;
+    padding-top: 80px;
+  }
 }
 
 .join button {
@@ -519,7 +533,7 @@ form .fas {
   display: inline-block;
   padding: 10px 25px;
   color: black;
-  background-color: #ddd;
+  background-color: var(--primary-color);
   text-align: center;
   cursor: pointer;
   font-size: 1rem;
@@ -529,8 +543,8 @@ form .fas {
 }
 
 .join button:hover {
-  background-color: var(--primary-color);
-  color: black;
+  background-color: black;
+  color: var(--primary-color);
 }
 .projcards > ul > li > figure > figcaption > h3 {
   color: white;
@@ -569,4 +583,35 @@ form .fas {
   font-weight: bold;
   font-size: 40px;
   padding-top: 35px;
+}
+
+/*  CONTACT PAGE  */
+
+.contactpage{
+  color: var(--primary-color);
+  padding-top: 100px;
+  font-size: 40px;
+}
+.contact h2{
+  color: white;
+  padding: 60px 30px;
+  font-size: 30px;
+}
+.contact p{
+  color: white;
+  font-weight: bold;
+  padding: 0px 50px;
+  font-size: 20px;
+}
+.contact button{
+  padding: 15px;
+  background-color: var(--primary-color);
+  border-radius: 20px;
+  margin: 40px 50px;
+  cursor: pointer;
+  margin-bottom: 300px;
+}
+.contact button:hover{
+  color: var(--primary-color);
+  background-color: black;
 }
