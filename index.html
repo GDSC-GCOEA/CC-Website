@@ -12,9 +12,6 @@
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
   <script src="https://kit.fontawesome.com/337c394ef7.js" crossorigin="anonymous"></script>
   <title>Coding Club GCOEA</title>
-  <link rel="icon" type="image/png" href="./assets/GCOE.png" />
-  <link rel="stylesheet" href="./styles.css" />
-  <title>Coding Club GCOEA</title>
 
   <!-- Favicons -->
   <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png" />
@@ -30,17 +27,19 @@
 <body>
   <!-- Navbar -->
   <nav>
-    <h1>Coding Club</h1>
+    <a href="/">
+      <h1>Coding Club</h1>
+    </a>
     <ul class="navigation">
       <li><a href="#about" class="nav-link">About Us</a></li>
       <li><a href="#projects" class="nav-link">Projects</a></li>
-      <li><a href="#contact" class="nav-link">Contact</a></li>
+      <li><a href="./contact.html" class="nav-link">Contact</a></li>
     </ul>
- 
+
     <button class="burger-menu" id="burger-menu">
       <ion-icon class="bars" name="menu-outline"></ion-icon>
     </button>
- 
+
   </nav>
   <!--HeroImage-->
   <div class="hero-image">
@@ -50,54 +49,11 @@
       <a href="https://github.com/GCOEA-Coding-Club"><button>Github</button></a>
     </div>
   </div>
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container1">
-      <div class="row">
-        <div class="footer-col">
-          <h4>Coding Club <div class="underline"><span></span></div>
-          </h4>
-          <p>
-            Coding Club GCOEA is a coding community of Government College of Engineering for students who are interested
-            in coding, development and computer engineering.
-          </p>
-        </div>
-        <div class="footer-col">
-          <h4>Links<div class="underline"><span></span></h4>
-          <ul>  
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Projects</a></li>
-            <li><a href="#">Contact</a></li>
-            <li><a href="#">Privacy Policy</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Newletter<div class="underline"><span></span></h4>
-          <form>
-            <i class="far fa-envelope"></i>
-            <input type="email" placeholder="Enter your email id" required>
-            <button type="submit"><i class="fas fa-arrow-right"></i></button>
-          </form>
-        </div>
-        <div class="footer-col">
-          <h4>Follow Us<div class="underline"><span></span></h4>
-          <div class="social-links">
-            <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
-            <a href="https://chat.whatsapp.com/C4ZkTO4Z7QO246c9gAon5K" target="_blank"><i
-                class="fab fa-whatsapp"></i></a>
-            <a href="https://github.com/GCOEA-Coding-Club" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="#" target="_blank"><i class="fab fa-discord"></i></a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </footer>
 
-</body>
-<script src="script.js"></script>
+
 
   <!-- About Us  -->
-  <div class="section">
+  <div class="section" id="about">
     <div class="container">
       <div class="content-section">
         <div class="title">
@@ -105,12 +61,13 @@
         </div>
         <div class="content">
           <h3>Convert your ideas into code!</h3>
-          <p>Coding Club GCOEA is a coding community of Government College of Engineering for students who are interested in coding, development and computer engineering.</p>
+          <p>Coding Club GCOEA is a coding community of Government College of Engineering for students who are
+            interested in coding, development and computer engineering.</p>
         </div>
         <div class="social">
-          <a href=""><i class="fab fa-facebook-f"></i></a>
-          <a href=""><i class="fab fa-twitter"></i></a>
-          <a href=""><i class="fab fa-instagram"></i></a>
+          <a onclick="facebook()" href=""><i class="fab fa-facebook-f"></i></a>
+          <a onclick="twitter()" href=""><i class="fab fa-twitter"></i></a>
+          <a onclick="instagram()" href=""><i class="fab fa-instagram"></i></a>
         </div>
       </div>
       <div class="image-section">
@@ -120,9 +77,22 @@
   </div>
 
 
-
-
+  <!-- How to join  -->
+  <div class="section2">
+    <div class="title2">
+      <h1>How to join?</h1>
+    </div>
+    <div class="content2">
+      <h3>Want to join the community?</h3>
+      <h3>Join the WhatsApp group</h3>
+      <h3>Prove your efficiency in Git & Github and you will be accepted if the mods are convinced by your skills.</h3>
+    </div>
+    <div class="join">
+      <a href="https://chat.whatsapp.com/C4ZkTO4Z7QO246c9gAon5K"><button>Join whatsapp group</button></a>
+    </div>
+  </div>
 </body>
+
 <script src="script.js"></script>
 <!-- Ion icons scripts -->
 <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
@@ -130,18 +100,12 @@
 <script>
   const fileInput = document.getElementById('file-input');
 
-  fileInput.addEventListener('change', (e) => doSomethingWithFiles(e.target.files));
-  // Nav hamburgerburger selections
-
   const burger = document.querySelector("#burger-menu");
   const ul = document.querySelector("nav ul");
   const nav = document.querySelector("nav");
   burger.addEventListener("click", () => {
     ul.classList.toggle("show");
   });
-
-
-
   // Select nav links
   const navLink = document.querySelectorAll(".nav-link");
 
@@ -151,5 +115,104 @@
     })
   );
 </script>
+
+<!--Cards-->
+<center>
+  <h2 class="projectstitle" id="projects">PROJECTS</h2>
+</center>
+<section class="projcards" id="projcards">
+  <ul>
+    <li>
+      <figure>
+        <img
+          src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80"
+          alt="Several hands holding beer glasses">
+        <figcaption>
+          <h3>Coding Club Website</h3>
+        </figcaption>
+      </figure>
+      <p>
+        Wondering how was this website made? Check out the GitHub repository of this website to learn how it is so
+        mobile responsive and smooth!
+      </p>
+      <a href="#">GitHub Link</a>
+    </li>
+    <li>
+      <figure>
+        <img
+          src="https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80"
+          alt="Several friends doing a toast">
+        <figcaption>
+          <h3>E-commerce Store</h3>
+        </figcaption>
+      </figure>
+      <p>
+        An open source E-commerce clothing store website where you can browse through large number of clothes and
+        accessories and buy them at ease.
+      </p>
+      <a href="#">Github Link</a>
+    </li>
+    <li>
+      <figure>
+        <img
+          src="https://images.unsplash.com/photo-1501167786227-4cba60f6d58f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80"
+          alt="Three different glasses of beer">
+        <figcaption>
+          <h3>Banking System</h3>
+        </figcaption>
+      </figure>
+      <p>
+        A banking system built upon the power of Node.js to allow easy and fast money transfers in a safe and secure way
+        with protection from SQL Injection.
+      </p>
+      <a href="#">Github Link</a>
+    </li>
+  </ul>
+</section>
+
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container1">
+    <div class="row">
+      <div class="footer-col">
+        <h4>Coding Club <div class="underline"><span></span></div>
+        </h4>
+        <p>
+          Coding Club GCOEA is a coding community of Government College of Engineering for students who are interested
+          in coding, development and computer engineering.
+        </p>
+      </div>
+      <div class="footer-col">
+        <h4>Links<div class="underline"><span></span></h4>
+        <ul>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Projects</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Newletter<div class="underline"><span></span></h4>
+        <form>
+          <i class="far fa-envelope"></i>
+          <input type="email" placeholder="Enter your email id" required>
+          <button type="submit"><i class="fas fa-arrow-right"></i></button>
+        </form>
+      </div>
+      <div class="footer-col">
+        <h4>Follow Us<div class="underline"><span></span></h4>
+        <div class="social-links">
+          <a onclick="facebook()" href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://chat.whatsapp.com/C4ZkTO4Z7QO246c9gAon5K" target="_blank"><i class="fab fa-whatsapp"></i></a>
+          <a href="https://github.com/GCOEA-Coding-Club" target="_blank"><i class="fab fa-github"></i></a>
+          <a href="#" target="_blank"><i class="fab fa-discord"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+</body>
+<script src="script.js"></script>
 
 </html>
